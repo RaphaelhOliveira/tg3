@@ -4,7 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
-  <link rel="stylesheet" href="index.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .form-control {
+      margin-bottom: 20px;
+    }
+
+    .form-control label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-control input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .error-msg {
+      color: red;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -23,6 +72,21 @@
     <p id="error-msg" class="error-msg"></p>
   </div>
 
-  <script src="index.js"></script>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      // Simulação de autenticação (substitua isso com sua lógica de autenticação real)
+      if (username === 'usuario' && password === 'senha') {
+        alert('Login bem-sucedido!');
+        // Aqui você pode redirecionar o usuário para outra página
+      } else {
+        document.getElementById('error-msg').textContent = 'Credenciais inválidas. Por favor, tente novamente.';
+      }
+    });
+  </script>
 </body>
 </html>
