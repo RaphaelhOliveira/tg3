@@ -1,10 +1,43 @@
-<h1>OI</h1>
-<h2>olaaaaaaa</h2>
-<h2>oi</h2>
-<style>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <div class="form-control">
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-control">
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit">Entrar</button>
+    </form>
+    <p id="error-msg" class="error-msg"></p>
+  </div>
 
-h2 {
-  color: #blue;
-}
-  
-</style>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      // Simulação de autenticação (substitua isso com sua lógica de autenticação real)
+      if (username === 'usuario' && password === 'senha') {
+        alert('Login bem-sucedido!');
+        // Aqui você pode redirecionar o usuário para outra página
+      } else {
+        document.getElementById('error-msg').textContent = 'Credenciais inválidas. Por favor, tente novamente.';
+      }
+    });
+  </script>
+</body>
+</html>
