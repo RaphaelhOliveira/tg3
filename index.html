@@ -25,7 +25,7 @@
     .login-box {
       position: relative; /* Adicionado para posicionar o formulário na frente das imagens */
       z-index: 1; /* Colocado um z-index maior para o formulário aparecer na frente */
-      padding: 20px;
+      padding: 15px; /* Diminui um pouco o preenchimento do formulário */
       border: 2px solid #007bff; /* Alterei a cor da borda para azul */
       border-radius: 10px; /* Ajustei o raio da borda para 10px */
       background-color: #f9f9f9;
@@ -37,7 +37,7 @@
     }
 
     .form-control {
-      margin-bottom: 20px;
+      margin-bottom: 15px; /* Diminui um pouco a margem inferior dos controles */
     }
 
     .form-control label {
@@ -75,11 +75,10 @@
 
     /* Estilo para as imagens */
     .slideshow {
-      max-width: 100%;
-      width: 100%; /* Definido 100% para preencher todo o espaço disponível */
-      height: auto;
+      width: 100%; /* Definido 100% para cobrir todo o espaço disponível */
+      height: 100%; /* Definido 100% para cobrir todo o espaço disponível */
+      object-fit: cover; /* Faz a imagem cobrir todo o espaço da div */
       border-radius: 10px;
-      display: none; /* Inicialmente esconde as imagens */
       position: absolute; /* Posiciona as imagens sobre a caixa de login */
       top: 0;
       left: 0;
@@ -89,11 +88,6 @@
 </head>
 <body>
   <div class="container">
-    <!-- Imagens do slideshow -->
-    <img class="slideshow" src="https://images.drive.com.au/caradvice/image/private/c_fill,f_auto,g_auto,h_1080,q_auto:eco,w_1920/v1/efsulll3yxnnpmbissx7" alt="Imagem 1">
-    <img class="slideshow" src="https://www.webmotors.com.br/wp-content/uploads/2022/03/05073059/274188655_526833631996066_8972501954140295031_n.jpg" alt="Imagem 2">
-    <img class="slideshow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Paris_Motor_Show_2012_%288065253081%29.jpg/800px-Paris_Motor_Show_2012_%288065253081%29.jpghttps://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Paris_Motor_Show_2012_%288065253081%29.jpg/800px-Paris_Motor_Show_2012_%288065253081%29.jpg" alt="Imagem 3">
-    
     <!-- Formulário de login -->
     <div class="login-box">
       <h2>Login</h2>
@@ -110,6 +104,11 @@
       </form>
       <p id="error-msg" class="error-msg"></p>
     </div>
+
+    <!-- Imagens do slideshow -->
+    <img class="slideshow" src="https://images.drive.com.au/caradvice/image/private/c_fill,f_auto,g_auto,h_1080,q_auto:eco,w_1920/v1/efsulll3yxnnpmbissx7" alt="Imagem 1">
+    <img class="slideshow" src="https://www.webmotors.com.br/wp-content/uploads/2022/03/05073059/274188655_526833631996066_8972501954140295031_n.jpg" alt="Imagem 2">
+    <img class="slideshow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Paris_Motor_Show_2012_%288065253081%29.jpg/800px-Paris_Motor_Show_2012_%288065253081%29.jpghttps://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Paris_Motor_Show_2012_%288065253081%29.jpg/800px-Paris_Motor_Show_2012_%288065253081%29.jpg" alt="Imagem 3">
   </div>
 
   <script>
