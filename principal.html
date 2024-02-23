@@ -1,1 +1,147 @@
-<h1>oi</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-widht, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-aling: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 5px:
+    }
+
+    form input[type="text"]
+    form input[type="email"]
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    form button {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20x;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Concessionária</h1>
+    <nav>
+      <ul>
+        <li><a href="">1</a></li>
+        <li><a href="">2</a></li>
+        <li><a href="">3</a></li>
+        <li><a href="">4</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="1">
+    <h2>Bem-vindo à Concessionária</h2>
+    <p>Oferecemos uma ampla seleção de veículos novos e usados para atender às suas necessidades.</p>
+  </section>
+  <section id="services">
+    <h2>Nossos Serviços</h2>
+    <ul>
+      <li>Vendas de Veículos</li>
+      <li>Serviço de Manutenção</li>
+      <li>Financiamento</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Entre em Contato Conosco</h2>
+    <form id="contact-form">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" required><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br>
+      <label for="message">Mensagem:</label><br>
+      <textarea id="message" name="message" required></textarea><br>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Concessionária XYZ. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    // JavaScript para carregar a lista de veículos do inventário
+    window.addEventListener('DOMContentLoaded', function() {
+      // Simulação de dados de veículos (substituir com dados reais)
+      const vehicles = [
+        { make: 'Toyota', model: 'Corolla', year: 2023, price: '$25,000' },
+        { make: 'Honda', model: 'Civic', year: 2022, price: '$22,500' },
+        { make: 'Ford', model: 'F-150', year: 2024, price: '$35,000' }
+      ];
+
+      const vehicleList = document.getElementById('vehicle-list');
+
+      // Iterar sobre a lista de veículos e criar elementos HTML para exibição
+      vehicles.forEach(vehicle => {
+        const listItem = document.createElement('div');
+        listItem.innerHTML = `<h3>${vehicle.make} ${vehicle.model} (${vehicle.year})</h3><p>Preço: ${vehicle.price}</p>`;
+        vehicleList.appendChild(listItem);
+      });
+    });
+  </script> 
+</body>
+</html>
