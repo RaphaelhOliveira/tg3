@@ -17,6 +17,7 @@
     }
 
     .container {
+      position: relative; /* Adicionado para posicionar as imagens dentro do contêiner */
       width: 100%;
       max-width: 400px; /* Limita a largura máxima para melhor visualização */
     }
@@ -69,6 +70,17 @@
     .error-msg {
       color: red;
     }
+
+    /* Estilo para as imagens */
+    .slideshow {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      display: none; /* Inicialmente esconde as imagens */
+      position: absolute; /* Posiciona as imagens sobre a caixa de login */
+      top: 0;
+      left: 0;
+    }
   </style>
 </head>
 <body>
@@ -88,23 +100,33 @@
       </form>
       <p id="error-msg" class="error-msg"></p>
     </div>
+
+    <!-- Imagens do slideshow -->
+    <img class="slideshow" src="https://images.drive.com.au/caradvice/image/private/c_fill,f_auto,g_auto,h_1080,q_auto:eco,w_1920/v1/efsulll3yxnnpmbissx7" alt="Imagem 1">
+    <img class="slideshow" src="https://www.webmotors.com.br/wp-content/uploads/2022/03/05073059/274188655_526833631996066_8972501954140295031_n.jpg" alt="Imagem 2">
+    <img class="slideshow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Paris_Motor_Show_2012_%288065253081%29.jpg/800px-Paris_Motor_Show_2012_%288065253081%29.jpghttps://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Paris_Motor_Show_2012_%288065253081%29.jpg/800px-Paris_Motor_Show_2012_%288065253081%29.jpg" alt="Imagem 3">
   </div>
 
   <script>
-    document.getElementById('loginForm').addEventListener('submit', function(event) {
-      event.preventDefault();
+    // Função para alternar entre as imagens
+    var slides = document.querySelectorAll('.slideshow');
+    var currentSlide = 0;
 
-      var username = document.getElementById('username').value;
-      var password = document.getElementById('password').value;
-
-      // Simulação de autenticação (substitua isso com sua lógica de autenticação real)
-      if (username === 'usuario' && password === 'senha') {
-        alert('Login bem-sucedido!');
-        // Aqui você pode redirecionar o usuário para outra página
-      } else {
-        document.getElementById('error-msg').textContent = 'Credenciais inválidas. Por favor, tente novamente.';
+    function showSlide(index) {
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
       }
-    });
+      slides[index].style.display = 'block';
+    }
+
+    // Inicia o slideshow
+    showSlide(currentSlide);
+
+    // Função para trocar as imagens a cada 3 segundos
+    setInterval(function() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }, 3000);
   </script>
 </body>
 </html>
