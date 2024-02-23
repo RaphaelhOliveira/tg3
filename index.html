@@ -109,10 +109,8 @@
 </head>
 <body>
   <div class="container">
-    <!-- Imagens do slideshow -->
-    <img class="slideshow" src="https://images.drive.com.au/caradvice/image/private/c_fill,f_auto,g_auto,h_1080,q_auto:eco,w_1920/v1/efsulll3yxnnpmbissx7" alt="Imagem 1">
-    <img class="slideshow" src="https://wallpapersmug.com/download/3840x2400/1f9944/sports-car-red-ferrari-laferrari.jpg" alt="Imagem 2">
-    <img class="slideshow" src="https://www.hdcarwallpapers.com/walls/mclaren_p1_5k-HD.jpg" alt="Imagem 3">
+    <!-- Vídeo do slideshow -->
+    <video class="slideshow" src="https://youtu.be/LgHj9zlA2Ag" autoplay muted loop></video>
     
     <!-- Formulário de login -->
     <div class="login-box">
@@ -134,24 +132,24 @@
 
   
 <script>
-    // Função para alternar entre as imagens
-    var slides = document.querySelectorAll('.slideshow');
-    var currentSlide = 0;
+    // Função para alternar entre os vídeos
+    var videos = document.querySelectorAll('.slideshow');
+    var currentVideo = 0;
 
-    function showSlide(index) {
-      for (var i = 0; i < slides.length; i++) {
-        slides[i].style.display = 'none';
+    function showVideo(index) {
+      for (var i = 0; i < videos.length; i++) {
+        videos[i].style.display = 'none';
       }
-      slides[index].style.display = 'block';
+      videos[index].style.display = 'block';
     }
 
-    // Inicia o slideshow
-    showSlide(currentSlide);
+    // Inicia o vídeo
+    showVideo(currentVideo);
 
-    // Função para trocar as imagens a cada 3 segundos
+    // Função para trocar os vídeos a cada 3 segundos
     setInterval(function() {
-      currentSlide = (currentSlide + 1) % slides.length;
-      showSlide(currentSlide);
+      currentVideo = (currentVideo + 1) % videos.length;
+      showVideo(currentVideo);
     }, 3000);
   </script>
 </body>
