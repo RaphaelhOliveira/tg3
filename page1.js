@@ -1,24 +1,23 @@
- let slideTitleE1 =
-   document.getElementById('slide-title');
- let slideStatusEl =
-document.getElementByID('slide-status');
-let nextSlidetTitle
-document.querySelectorAll('[data-slide-status="${slideId}"]'){0}.innerHTML;
+let slideTitleEl = document.getElementById('slide-title');
+let slideStatusEl = document.getElementById('slide-status');
+let nextSlideTitle = document.querySelectorAll(`[data-slide-status="${slideId}"]`)[0].innerHTML;
 
-TweenLite.fromTo(slideTitle, 0.5,
-                 {
-                   autoAlpha: 1,
-                   y: 0 },
+TweenLite.fromTo(slideTitleEl, 0.5,
+  {
+    autoAlpha: 1,
+    y: 0
+  },
+  {
+    autoAlpha: 0,
+    y: 20,
+    ease: 'Expo.easeIn',
+    onComplete: function () {
+      slideTitleEl.innerHTML = nextSlideTitle;
 
-                 {
-                   autoAlpha: 0,
-                   y: 20,
-                   ease: 'Expo.easIn',
-                   onComplete: funtion () {
-                     slideTitleEl.innerHTML = nextSlideTitle;
-
-  TweenLitle.to(slideTitle 0,5 {
-    autoAlpha: 1, 
-      y:0 });
-
-  }});
+      TweenLite.to(slideTitleEl, 0.5, {
+        autoAlpha: 1,
+        y: 0
+      });
+    }
+  }
+);
