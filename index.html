@@ -26,6 +26,32 @@
       align-items: center; /* Centraliza o conteúdo na vertical */
     }
 
+    .slideshow {
+      width: 100vw; /* Define a largura da imagem igual à largura da janela de visualização */
+      height: auto; /* Mantém a proporção da imagem */
+      position: absolute; /* Posiciona as imagens sobre a caixa de login */
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* Centraliza as imagens */
+      z-index: 0; /* Colocado um z-index menor para ficar atrás do formulário */
+      animation: fade 3s infinite; /* Adiciona a animação de fade */
+    }
+
+    @keyframes fade {
+      0% {
+        opacity: 0;
+      }
+      25% {
+        opacity: 1;
+      }
+      75% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
     .login-box {
       position: relative; /* Adicionado para posicionar o formulário na frente das imagens */
       z-index: 1; /* Colocado um z-index maior para o formulário aparecer na frente */
@@ -79,17 +105,6 @@
     .error-msg {
       color: red;
     }
-
-    /* Estilo para as imagens */
-    .slideshow {
-      width: 100vw; /* Define a largura da imagem igual à largura da janela de visualização */
-      height: auto; /* Mantém a proporção da imagem */
-      position: absolute; /* Posiciona as imagens sobre a caixa de login */
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); /* Centraliza as imagens */
-      z-index: 0; /* Colocado um z-index menor para ficar atrás do formulário */
-    }
   </style>
 </head>
 <body>
@@ -117,7 +132,8 @@
     </div>
   </div>
 
-  <script>
+  
+<script>
     // Função para alternar entre as imagens
     var slides = document.querySelectorAll('.slideshow');
     var currentSlide = 0;
