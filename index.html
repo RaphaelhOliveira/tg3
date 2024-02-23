@@ -19,12 +19,16 @@
     .container {
       position: relative; /* Adicionado para posicionar as imagens dentro do contêiner */
       width: 100%;
-      max-width: 600px; /* Aumentei a largura máxima para melhor visualização */
+      height: 100vh;
+      overflow: hidden; /* Adicionado para esconder o overflow das imagens */
     }
 
     .login-box {
       position: relative; /* Adicionado para posicionar o formulário na frente das imagens */
       z-index: 1; /* Colocado um z-index maior para o formulário aparecer na frente */
+      width: 80%; /* Reduzi um pouco a largura do formulário */
+      max-width: 400px; /* Limita a largura máxima para melhor visualização */
+      margin: auto; /* Centraliza o formulário na horizontal */
       padding: 15px; /* Diminui um pouco o preenchimento do formulário */
       border: 2px solid #007bff; /* Alterei a cor da borda para azul */
       border-radius: 10px; /* Ajustei o raio da borda para 10px */
@@ -75,19 +79,23 @@
 
     /* Estilo para as imagens */
     .slideshow {
-      width: 100%; /* Definido 100% para cobrir todo o espaço disponível */
-      height: 100%; /* Definido 100% para cobrir todo o espaço disponível */
-      object-fit: cover; /* Faz a imagem cobrir todo o espaço da div */
-      border-radius: 10px;
+      width: 100vw; /* Define a largura da imagem igual à largura da janela de visualização */
+      height: auto; /* Mantém a proporção da imagem */
       position: absolute; /* Posiciona as imagens sobre a caixa de login */
-      top: 0;
-      left: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* Centraliza as imagens */
       z-index: 0; /* Colocado um z-index menor para ficar atrás do formulário */
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- Imagens do slideshow -->
+    <img class="slideshow" src="https://images.drive.com.au/caradvice/image/private/c_fill,f_auto,g_auto,h_1080,q_auto:eco,w_1920/v1/efsulll3yxnnpmbissx7" alt="Imagem 1">
+    <img class="slideshow" src="https://www.webmotors.com.br/wp-content/uploads/2022/03/05073059/274188655_526833631996066_8972501954140295031_n.jpg" alt="Imagem 2">
+    <img class="slideshow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Paris_Motor_Show_2012_%288065253081%29.jpg/800px-Paris_Motor_Show_2012_%288065253081%29.jpghttps://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Paris_Motor_Show_2012_%288065253081%29.jpg/800px-Paris_Motor_Show_2012_%288065253081%29.jpg" alt="Imagem 3">
+    
     <!-- Formulário de login -->
     <div class="login-box">
       <h2>Login</h2>
@@ -104,11 +112,6 @@
       </form>
       <p id="error-msg" class="error-msg"></p>
     </div>
-
-    <!-- Imagens do slideshow -->
-    <img class="slideshow" src="https://images.drive.com.au/caradvice/image/private/c_fill,f_auto,g_auto,h_1080,q_auto:eco,w_1920/v1/efsulll3yxnnpmbissx7" alt="Imagem 1">
-    <img class="slideshow" src="https://www.webmotors.com.br/wp-content/uploads/2022/03/05073059/274188655_526833631996066_8972501954140295031_n.jpg" alt="Imagem 2">
-    <img class="slideshow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Paris_Motor_Show_2012_%288065253081%29.jpg/800px-Paris_Motor_Show_2012_%288065253081%29.jpghttps://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Paris_Motor_Show_2012_%288065253081%29.jpg/800px-Paris_Motor_Show_2012_%288065253081%29.jpg" alt="Imagem 3">
   </div>
 
   <script>
