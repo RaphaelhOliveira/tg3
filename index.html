@@ -100,12 +100,19 @@
     }
 
     .login-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-decoration: none;
       color: black;
+      background-color: rgba(0, 0, 0, 0.1);
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
     }
 
     .login-link:hover {
-      text-decoration: underline;
+      background-color: rgba(0, 0, 0, 0.2);
     }
 
     .error-msg {
@@ -132,7 +139,7 @@
           <label for="password">Senha:</label>
           <input type="password" id="password" name="password" required>
         </div>
-        <input type="submit" value="Entrar" />
+        <a class="login-link" href="principal.html">Entrar</a>
       </form>
       <p id="error-msg" class="error-msg"></p>
     </div>
