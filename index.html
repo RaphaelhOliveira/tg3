@@ -10,17 +10,30 @@
       margin: 0;
       padding: 0;
       height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background-color: #f0f0f0; /* Adicionei uma cor de fundo para melhor visualização */
     }
 
+    .container {
+      position: relative; /* Adicionado para posicionar as imagens dentro do contêiner */
+      width: 100%;
+      height: 100vh;
+      overflow: hidden; /* Adicionado para esconder o overflow das imagens */
+      display: flex; /* Adicionado para centralizar o conteúdo */
+      justify-content: center; /* Centraliza o conteúdo na horizontal */
+      align-items: center; /* Centraliza o conteúdo na vertical */
+    }
+
     .slideshow {
-      width: 100%; /* Definido para cobrir toda a largura da tela */
-      height: 100%; /* Definido para cobrir toda a altura da tela */
-      object-fit: cover; /* Faz com que o vídeo mantenha a proporção e cubra todo o espaço disponível */
-      position: fixed; /* Fixa o vídeo na tela */
-      top: 0;
-      left: 0;
-      z-index: -1; /* Colocado um z-index menor para ficar atrás do formulário */
+      width: 100vw; /* Define a largura da imagem igual à largura da janela de visualização */
+      height: auto; /* Mantém a proporção da imagem */
+      position: absolute; /* Posiciona as imagens sobre a caixa de login */
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* Centraliza as imagens */
+      z-index: 0; /* Colocado um z-index menor para ficar atrás do formulário */
       animation: fade 3s infinite; /* Adiciona a animação de fade */
     }
 
@@ -39,14 +52,8 @@
       }
     }
 
-    .container {
-      position: relative; /* Adicionado para posicionar o formulário na frente das imagens */
-      display: flex; /* Adicionado para centralizar o conteúdo */
-      justify-content: center; /* Centraliza o conteúdo na horizontal */
-      align-items: center; /* Centraliza o conteúdo na vertical */
-    }
-
     .login-box {
+      position: relative; /* Adicionado para posicionar o formulário na frente das imagens */
       z-index: 1; /* Colocado um z-index maior para o formulário aparecer na frente */
       width: 80%; /* Reduzi um pouco a largura do formulário */
       max-width: 400px; /* Limita a largura máxima para melhor visualização */
@@ -101,10 +108,12 @@
   </style>
 </head>
 <body>
-  <!-- Vídeo do slideshow -->
-  <video class="slideshow" src="<iframe width="1280" height="720" src="https://www.youtube.com/embed/LgHj9zlA2Ag" title="Back in Black. | GT3 458 x AMG [4K]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>" autoplay muted loop></video>
-  
   <div class="container">
+    <!-- Imagens do slideshow -->
+    <img class="slideshow" src="https://images.drive.com.au/caradvice/image/private/c_fill,f_auto,g_auto,h_1080,q_auto:eco,w_1920/v1/efsulll3yxnnpmbissx7" alt="Imagem 1">
+    <img class="slideshow" src="https://wallpapersmug.com/download/3840x2400/1f9944/sports-car-red-ferrari-laferrari.jpg" alt="Imagem 2">
+    <img class="slideshow" src="https://www.hdcarwallpapers.com/walls/mclaren_p1_5k-HD.jpg" alt="Imagem 3">
+    
     <!-- Formulário de login -->
     <div class="login-box">
       <h2>Login</h2>
@@ -123,26 +132,26 @@
     </div>
   </div>
 
+  
+<script>
+    // Função para alternar entre as imagens
+    var slides = document.querySelectorAll('.slideshow');
+    var currentSlide = 0;
 
-  <script>
-    // Função para alternar entre os vídeos
-    var videos = document.querySelectorAll('.slideshow');
-    var currentVideo = 0;
-
-    function showVideo(index) {
-      for (var i = 0; i < videos.length; i++) {
-        videos[i].style.display = 'none';
+    function showSlide(index) {
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
       }
-      videos[index].style.display = 'block';
+      slides[index].style.display = 'block';
     }
 
-    // Inicia o vídeo
-    showVideo(currentVideo);
+    // Inicia o slideshow
+    showSlide(currentSlide);
 
-    // Função para trocar os vídeos a cada 3 segundos
+    // Função para trocar as imagens a cada 3 segundos
     setInterval(function() {
-      currentVideo = (currentVideo + 1) % videos.length;
-      showVideo(currentVideo);
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
     }, 3000);
   </script>
 </body>
