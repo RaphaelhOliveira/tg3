@@ -153,11 +153,13 @@
           <label for="password">Senha:</label>
           <input type="password" id="password" name="password" required>
         </div>
-        <a class="login-link" href="principal.html">Entrar</a>
+        <button class="login-link">Entrar</button>
       </form>
       <p id="error-msg" class="error-msg"></p>
     </div>
   </div>
+
+  <audio id="engineSound" src="caminho/para/o/seu/audio.mp3"></audio>
 
   <script>
     // Função para alternar entre as imagens
@@ -180,16 +182,18 @@
       showSlide(currentSlide);
     }, 3000);
 
-    // Função para animar o redirecionamento do site
+    // Função para animar o redirecionamento do site e reproduzir o som do motor
     function animateRedirect(event) {
       event.preventDefault();
+      var engineSound = document.getElementById('engineSound');
+      engineSound.play(); // Inicia a reprodução do som do motor
       document.querySelector('.container').classList.add('fadeOut');
       setTimeout(function() {
         window.location.href = event.target.href;
       }, 1000);
     }
 
-    // Adiciona um evento de clique aos links de login
+    // Adiciona um evento de clique ao botão de login
     document.querySelector('.login-link').addEventListener('click', animateRedirect);
   </script>
 </body>
