@@ -118,6 +118,20 @@
     .error-msg {
       color: red;
     }
+
+    /* Adicione aqui a animação para o fadeOut */
+    .fadeOut {
+      animation: fadeOut 1s ease;
+    }
+
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
+    }
   </style>
 </head>
 <body>
@@ -145,8 +159,7 @@
     </div>
   </div>
 
-  
-<script>
+  <script>
     // Função para alternar entre as imagens
     var slides = document.querySelectorAll('.slideshow');
     var currentSlide = 0;
@@ -166,6 +179,18 @@
       currentSlide = (currentSlide + 1) % slides.length;
       showSlide(currentSlide);
     }, 3000);
+
+    // Função para animar o redirecionamento do site
+    function animateRedirect(event) {
+      event.preventDefault();
+      document.querySelector('.container').classList.add('fadeOut');
+      setTimeout(function() {
+        window.location.href = event.target.href;
+      }, 1000);
+    }
+
+    // Adiciona um evento de clique aos links de login
+    document.querySelector('.login-link').addEventListener('click', animateRedirect);
   </script>
 </body>
 </html>
