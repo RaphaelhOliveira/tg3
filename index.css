@@ -1,0 +1,127 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Adicionei uma cor de fundo para melhor visualização */
+}
+
+.container {
+  position: relative; /* Adicionado para posicionar as imagens dentro do contêiner */
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; /* Adicionado para esconder o overflow das imagens */
+  display: flex; /* Adicionado para centralizar o conteúdo */
+  justify-content: center; /* Centraliza o conteúdo na horizontal */
+  align-items: center; /* Centraliza o conteúdo na vertical */
+}
+
+.slideshow {
+  width: 100vw; /* Define a largura da imagem igual à largura da janela de visualização */
+  height: auto; /* Mantém a proporção da imagem */
+  position: absolute; /* Posiciona as imagens sobre a caixa de login */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centraliza as imagens */
+  z-index: 0; /* Colocado um z-index menor para ficar atrás do formulário */
+  animation: fade 3s infinite; /* Adiciona a animação de fade */
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.login-box {
+  position: relative; /* Adicionado para posicionar o formulário na frente das imagens */
+  z-index: 1; /* Colocado um z-index maior para o formulário aparecer na frente */
+  width: 80%; /* Reduzi um pouco a largura do formulário */
+  max-width: 400px; /* Limita a largura máxima para melhor visualização */
+  padding: 15px; /* Diminui um pouco o preenchimento do formulário */
+  /*border: 2px solid #007bff;*/ /* Removi a borda azul */
+  border-radius: 10px; /* Ajustei o raio da borda para 10px */
+  background-color: rgba(255, 255, 255, 0.5); /* Cor de fundo transparente */
+  backdrop-filter: blur(10px); /* Efeito de desfoque */
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); /* Adicionei uma sombra */
+  animation: slide-up 1s ease; /* Adiciona a animação de deslize para cima */
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.login-box h2 {
+  margin-top: 0;
+}
+
+.form-control {
+  margin-bottom: 15px; /* Diminui um pouco a margem inferior dos controles */
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  width: calc(100% - 20px); /* Define a largura do input com 10px de padding em cada lado */
+  padding: 10px; /* Adiciona 10px de preenchimento interno */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: transparent; /* Torna as barras transparentes */
+}
+
+.login-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.login-link:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.error-msg {
+  color: red;
+}
+
+/* Adicione aqui a animação para o slideRight */
+.slideRight {
+  animation: slideRight 1s ease;
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
