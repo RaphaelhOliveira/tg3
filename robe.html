@@ -1,2 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo Volkswagen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
 
+        /* Estilo para a imagem do logo */
+        .logo {
+            display: block;
+            margin: 0 auto;
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+        }
+        
+        .accordion {
+            background-color: #f4f4f4;
+            color: #333;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: background-color 0.3s ease;
+        }
+        
+        .accordion:hover {
+            background-color: #ddd;
+        }
+        
+        .panel {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .panel p {
+            margin-top: 0;
+        }
+
+        .active {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <img class="logo" src="https://www.imagensempng.com.br/wp-content/uploads/2023/05/3707.png" alt="Logo Volkswagen">
+    
+    <button class="accordion">História</button>
+    <div class="panel">
+        <p>A Volkswagen foi fundada em 1937 por Ferdinand Porsche a pedido do líder alemão Adolf Hitler, para produzir um carro popular acessível às famílias alemãs. O famoso Volkswagen Beetle foi o primeiro produto da empresa e se tornou um ícone do design automotivo.</p>
+    </div>
+
+    <button class="accordion">Marcas</button>
+    <div class="panel">
+        <p>O Grupo Volkswagen possui várias marcas, incluindo Volkswagen, Audi, Porsche, Bentley, Bugatti, Lamborghini, SEAT, Škoda, Ducati e MAN.</p>
+    </div>
+
+    <button class="accordion">Produção</button>
+    <div class="panel">
+        <p>A Volkswagen é um dos maiores fabricantes de automóveis do mundo, com fábricas em todo o mundo. Em 2020, produziu mais de 9 milhões de veículos, tornando-se uma das principais empresas do setor automotivo.</p>
+    </div>
+
+    <script>
+        var accordions = document.getElementsByClassName("accordion");
+
+        for (var i = 0; i < accordions.length; i++) {
+            accordions[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</div>
+
+</body>
+</html>
 
