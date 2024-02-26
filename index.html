@@ -119,17 +119,17 @@
       color: red;
     }
 
-    /* Adicione aqui a animação para o fadeOut */
-    .fadeOut {
-      animation: fadeOut 1s ease;
+    /* Adicione aqui a animação para o slideRight */
+    .slideRight {
+      animation: slideRight 1s ease;
     }
 
-    @keyframes fadeOut {
+    @keyframes slideRight {
       from {
-        opacity: 1;
+        transform: translateX(0%);
       }
       to {
-        opacity: 0;
+        transform: translateX(100%);
       }
     }
   </style>
@@ -153,13 +153,11 @@
           <label for="password">Senha:</label>
           <input type="password" id="password" name="password" required>
         </div>
-        <button class="login-link">Entrar</button>
+        <a class="login-link" href="principal.html">Entrar</a>
       </form>
       <p id="error-msg" class="error-msg"></p>
     </div>
   </div>
-
-  <audio id="engineSound" src="caminho/para/o/seu/audio.mp3"></audio>
 
   <script>
     // Função para alternar entre as imagens
@@ -182,18 +180,16 @@
       showSlide(currentSlide);
     }, 3000);
 
-    // Função para animar o redirecionamento do site e reproduzir o som do motor
+    // Função para animar o redirecionamento do site
     function animateRedirect(event) {
       event.preventDefault();
-      var engineSound = document.getElementById('engineSound');
-      engineSound.play(); // Inicia a reprodução do som do motor
-      document.querySelector('.container').classList.add('fadeOut');
+      document.querySelector('.container').classList.add('slideRight');
       setTimeout(function() {
         window.location.href = event.target.href;
       }, 1000);
     }
 
-    // Adiciona um evento de clique ao botão de login
+    // Adiciona um evento de clique aos links de login
     document.querySelector('.login-link').addEventListener('click', animateRedirect);
   </script>
 </body>
