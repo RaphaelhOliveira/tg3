@@ -34,49 +34,21 @@
     nav ul li a {
       color: #fff;
       text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom-color 0.3s ease; /* Adiciona uma transição suave */
     }
 
-    section {
-      padding: 20px;
+    nav ul li a:hover {
+      border-bottom-color: #fff;
     }
 
-    footer {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+    /* Efeito de rotação nos botões do dropdown */
+    .dropdown button {
+      transition: transform 0.3s ease; /* Adiciona uma transição suave */
     }
 
-    form label {
-      display: block;
-      margin-bottom: 5px:
-    }
-
-    form input[type="text"],
-    form input[type="email"],
-    form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      box-sizing: border-box;
-    }
-
-    form button {
-      background-color: #333;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    form button:hover {
-      background-color: #555;
+    .dropdown:hover button {
+      transform: rotate(180deg); /* Rotação ao passar o mouse */
     }
 
     /* Dropdown Button */
@@ -165,7 +137,7 @@
       <div class="dropdown">
         <button class="dropbtn">Quem Somos</button>
         <div class="dropdown-content">
-          <a href="#quem-somos">Tela de Quem Somos</a>
+          <a href="#quem-somos">Quem Somos</a>
           <a href="#equipe">Equipe</a>
           <a href="#contato">Contato</a>
         </div>
@@ -204,24 +176,21 @@
   </footer>
 
   <script>
-    // JavaScript para carregar a lista de veículos do inventário
-    window.addEventListener('DOMContentLoaded', function() {
-      // Simulação de dados de veículos (substituir com dados reais)
-      const vehicles = [
-        { make: 'Toyota', model: 'Corolla', year: 2023, price: '$25,000' },
-        { make: 'Honda', model: 'Civic', year: 2022, price: '$22,500' },
-        { make: 'Ford', model: 'F-150', year: 2024, price: '$35,000' }
-      ];
-
-      const vehicleList = document.getElementById('vehicle-list');
-
-      // Iterar sobre a lista de veículos e criar elementos HTML para exibição
-      vehicles.forEach(vehicle => {
-        const listItem = document.createElement('div');
-        listItem.innerHTML = `<h3>${vehicle.make} ${vehicle.model} (${vehicle.year})</h3><p>Preço: ${vehicle.price}</p>`;
-        vehicleList.appendChild(listItem);
+    // JavaScript para mostrar/esconder o conteúdo do dropdown
+    document.querySelectorAll('.dropdown').forEach(dropdown => {
+      dropdown.addEventListener('mouseover', function() {
+        this.querySelector('.dropdown-content').style.display = 'block';
+      });
+      dropdown.addEventListener('mouseout', function() {
+        this.querySelector('.dropdown-content').style.display = 'none';
       });
     });
-  </script> 
+
+    // JavaScript para enviar o formulário de contato (apenas simulação)
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Evita o envio do formulário
+      alert('Formulário enviado! (Apenas uma simulação)');
+    });
+  </script>
 </body>
 </html>
