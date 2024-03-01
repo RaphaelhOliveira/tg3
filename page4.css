@@ -1,0 +1,44 @@
+/* CSS fornecido */
+/* ... */
+/* Estilos para estrelas de avaliação */
+body{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Open Sans', sans-serif;
+text-decoration: none;
+list-style: none;
+}
+
+.Main{
+    color: aliceblue;
+    position: fixed;
+}
+.background{
+background-color: black;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center top;
+width: 100%;
+max-width: 100%;
+height: 100vh;
+}
+
+.rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+  }
+  .rating > label {
+    float: right;
+    display: inline;
+    padding: 0 2px;
+    position: relative;
+  }
+  .rating > label:hover:before,
+  .rating > label:hover ~ label:before,
+  .rating > input:checked ~ label:before {
+    content: "\2605";
+    position: absolute;
+  }
+  /* Fim do CSS fornecido */
+  
