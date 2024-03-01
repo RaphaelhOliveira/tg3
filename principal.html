@@ -79,6 +79,8 @@
       background-color: #f9f9f9;
       min-width: 160px;
       z-index: 1;
+      opacity: 0; /* Inicialmente, o conteúdo está invisível */
+      transition: opacity 0.3s ease; /* Adiciona uma transição suave */
     }
 
     /* Links inside the dropdown */
@@ -97,6 +99,7 @@
     /* Show the dropdown menu on hover */
     .dropdown:hover .dropdown-content {
       display: block;
+      opacity: 1; /* Torna o conteúdo visível */
     }
 
     /* Change the background color of the dropdown button when the dropdown content is shown */
@@ -180,17 +183,21 @@
     document.querySelectorAll('.dropdown').forEach(dropdown => {
       dropdown.addEventListener('mouseover', function() {
         this.querySelector('.dropdown-content').style.display = 'block';
+        this.querySelector('.dropdown-content').style.opacity = '1'; // Torna o conteúdo visível
       });
       dropdown.addEventListener('mouseout', function() {
-        this.querySelector('.dropdown-content').style.display = 'none';
+        this.querySelector('.dropdown-content').style.opacity = '0'; // Torna o conteúdo invisível
+        setTimeout(() => {
+          this.querySelector('.dropdown-content').style.display = 'none';
+        }, 300); // Tempo correspondente à duração da transição
       });
     });
 
     // JavaScript para enviar o formulário de contato (apenas simulação)
     document.getElementById('contact-form').addEventListener('submit', function(event) {
-      event.preventDefault(); // Evita o envio do formulário
-      alert('Formulário enviado! (Apenas uma simulação)');
+      event.preventDefault(); // Impede o envio padrão do formulário
+      alert('Formulário enviado! (Esta é apenas uma simulação)'); // Exibe uma caixa de alerta
     });
-  </script>
+  </script> 
 </body>
 </html>
