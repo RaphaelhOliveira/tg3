@@ -15,17 +15,6 @@
       color: #fff;
       padding: 20px;
       text-align: center;
-      opacity: 0; /* Inicialmente, o header está invisível */
-      animation: fadeIn 0.5s ease-in forwards; /* Adiciona uma animação de fade-in */
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0; /* Começa completamente invisível */
-      }
-      to {
-        opacity: 1; /* Termina completamente visível */
-      }
     }
 
     header h1 {
@@ -45,21 +34,49 @@
     nav ul li a {
       color: #fff;
       text-decoration: none;
-      border-bottom: 2px solid transparent;
-      transition: border-bottom-color 0.3s ease; /* Adiciona uma transição suave */
     }
 
-    nav ul li a:hover {
-      border-bottom-color: #fff;
+    section {
+      padding: 20px;
     }
 
-    /* Efeito de rotação nos botões do dropdown */
-    .dropdown button {
-      transition: transform 0.3s ease; /* Adiciona uma transição suave */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
     }
 
-    .dropdown:hover button {
-      transform: rotate(180deg); /* Rotação ao passar o mouse */
+    form label {
+      display: block;
+      margin-bottom: 5px:
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    form button {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #555;
     }
 
     /* Dropdown Button */
@@ -90,8 +107,6 @@
       background-color: #f9f9f9;
       min-width: 160px;
       z-index: 1;
-      opacity: 0; /* Inicialmente, o conteúdo está invisível */
-      transition: opacity 0.3s ease; /* Adiciona uma transição suave */
     }
 
     /* Links inside the dropdown */
@@ -110,22 +125,11 @@
     /* Show the dropdown menu on hover */
     .dropdown:hover .dropdown-content {
       display: block;
-      opacity: 1; /* Torna o conteúdo visível */
     }
 
     /* Change the background color of the dropdown button when the dropdown content is shown */
     .dropdown:hover .dropbtn {
       background-color: #555;
-    }
-
-    footer {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
     }
   </style>
 </head>
@@ -200,24 +204,23 @@
   </footer>
 
   <script>
-    // JavaScript para mostrar/esconder o conteúdo do dropdown
-    document.querySelectorAll('.dropdown').forEach(dropdown => {
-      dropdown.addEventListener('mouseover', function() {
-        this.querySelector('.dropdown-content').style.display = 'block';
-        this.querySelector('.dropdown-content').style.opacity = '1'; // Torna o conteúdo visível
-      });
-      dropdown.addEventListener('mouseout', function() {
-        this.querySelector('.dropdown-content').style.opacity = '0'; // Torna o conteúdo invisível
-        setTimeout(() => {
-          this.querySelector('.dropdown-content').style.display = 'none';
-        }, 300); // Tempo correspondente à duração da transição
-      });
-    });
+    // JavaScript para carregar a lista de veículos do inventário
+    window.addEventListener('DOMContentLoaded', function() {
+      // Simulação de dados de veículos (substituir com dados reais)
+      const vehicles = [
+        { make: 'Toyota', model: 'Corolla', year: 2023, price: '$25,000' },
+        { make: 'Honda', model: 'Civic', year: 2022, price: '$22,500' },
+        { make: 'Ford', model: 'F-150', year: 2024, price: '$35,000' }
+      ];
 
-    // JavaScript para enviar o formulário de contato (apenas simulação)
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-      event.preventDefault(); // Impede o envio padrão do formulário
-      alert('Formulário enviado! (Esta é apenas uma simulação)'); // Exibe uma caixa de alerta
+      const vehicleList = document.getElementById('vehicle-list');
+
+      // Iterar sobre a lista de veículos e criar elementos HTML para exibição
+      vehicles.forEach(vehicle => {
+        const listItem = document.createElement('div');
+        listItem.innerHTML = `<h3>${vehicle.make} ${vehicle.model} (${vehicle.year})</h3><p>Preço: ${vehicle.price}</p>`;
+        vehicleList.appendChild(listItem);
+      });
     });
   </script> 
 </body>
