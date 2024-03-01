@@ -38,10 +38,12 @@
     nav ul li a {
       color: #fff;
       text-decoration: none;
+      border-bottom: 2px solid transparent; /* Remove a linha inferior */
+      transition: border-bottom-color 0.3s ease; /* Transição suave */
     }
 
-    nav ul li a.white-link {
-      color: #fff; /* Cor branca para os links */
+    nav ul li a:hover {
+      border-bottom-color: #fff; /* Adiciona uma linha inferior ao passar o mouse */
     }
 
     section {
