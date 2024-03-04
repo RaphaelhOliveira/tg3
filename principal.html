@@ -1,227 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-widht, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-    }
-
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    nav ul li {
-      display: inline;
-      margin-right: 20px;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-    }
-
-    section {
-      padding: 20px;
-    }
-
-    footer {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-
-    form label {
-      display: block;
-      margin-bottom: 5px:
-    }
-
-    form input[type="text"],
-    form input[type="email"],
-    form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      box-sizing: border-box;
-    }
-
-    form button {
-      background-color: #333;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    form button:hover {
-      background-color: #555;
-    }
-
-    /* Dropdown Button */
-    .dropbtn {
-      background-color: #333;
-      color: #fff;
-      padding: 16px;
-      font-size: 16px;
-      border: none;
-      cursor: pointer;
-    }
-
-    /* Dropdown button on hover & focus */
-    .dropbtn:hover, .dropbtn:focus {
-      background-color: #555;
-    }
-
-    /* The container <div> - needed to position the dropdown content */
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    /* Dropdown Content (Hidden by Default) */
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      z-index: 1;
-    }
-
-    /* Links inside the dropdown */
-    .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-
-    /* Change color of dropdown links on hover */
-    .dropdown-content a:hover {
-      background-color: #ddd;
-    }
-
-    /* Show the dropdown menu on hover */
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    /* Change the background color of the dropdown button when the dropdown content is shown */
-    .dropdown:hover .dropbtn {
-      background-color: #555;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>CONCESSIONÁRIA</title>
+    <link rel="stylesheet" href="principal.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
-  <header>
-    <h1>Concessionária</h1>
-    <nav>
-      <div class="dropdown">
-        <button class="dropbtn">Concessionária</button>
-        <div class="dropdown-content">
-          <a href="page1.html">Carros à Venda</a>
-          <a href="page2.html">Carros Mais Vendidos</a>
-          <a href="page3.html">Pacotes Sazonais</a>
-          <a href="#rate-us">Avalie Aqui</a>
-          <a href="#my-cart">Meu Carrinho</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button class="dropbtn">Patrocinadores</button>
-        <div class="dropdown-content">
-          <a href="robe.html">Grupo Volkswagen</a>
-          <a href="#ford">Ford</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button class="dropbtn">Carros de exposição</button>
-        <div class="dropdown-content">
-          <a href="#só coloca">Fómula 1</a>
-          <a href="#só coloca">WEC</a>
-          <a href="#só coloca">GT Series</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button class="dropbtn">Quem Somos</button>
-        <div class="dropdown-content">
-          <a href="#quem-somos">Quem Somos</a>
-          <a href="#equipe">Equipe</a>
-          <a href="#contato">Contato</a>
-        </div>
-      </div>
-    </nav>
-  </header>
 
-  <section id="1">
-    <h2>Bem-vindo à Concessionária</h2>
-    <p>Oferecemos uma ampla seleção de veículos novos e usados para atender às suas necessidades.</p>
-  </section>
-  <section id="services">
-    <h2>Nossos Serviços</h2>
-    <ul>
-      <li>Vendas de Veículos</li>
-      <li>Serviço de Manutenção</li>
-      <li>Financiamento</li>
-    </ul>
-  </section>
+    <header class="header">
+        <a href="#" class="logo">Cars.</a>
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">h</a>
+            <a href="#">g</a>
+            <a href="#">s</a>
+        </nav>
 
-  <section id="contact">
-    <h2>Entre em Contato Conosco</h2>
-    <form id="contact-form">
-      <label for="name">Nome:</label>
-      <input type="text" id="name" name="name" required><br>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required><br>
-      <label for="message">Mensagem:</label><br>
-      <textarea id="message" name="message" required></textarea><br>
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
+        <div class="social-media"></div>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
 
-  <footer>
-    <p>&copy; 2024 Concessionária. Todos os direitos reservados.</p>
-  </footer>
-
-  <script>
-    // JavaScript para carregar a lista de veículos do inventário
-    window.addEventListener('DOMContentLoaded', function() {
-      // Simulação de dados de veículos (substituir com dados reais)
-      const vehicles = [
-        { make: 'Toyota', model: 'Corolla', year: 2023, price: '$25,000' },
-        { make: 'Honda', model: 'Civic', year: 2022, price: '$22,500' },
-        { make: 'Ford', model: 'F-150', year: 2024, price: '$35,000' }
-      ];
-
-      const vehicleList = document.getElementById('vehicle-list');
-
-      // Iterar sobre a lista de veículos e criar elementos HTML para exibição
-      vehicles.forEach(vehicle => {
-        const listItem = document.createElement('div');
-        listItem.innerHTML = `<h3>${vehicle.make} ${vehicle.model} (${vehicle.year})</h3><p>Preço: ${vehicle.price}</p>`;
-        vehicleList.appendChild(listItem);
-      });
-    });
-  </script> 
+    </header>
 </body>
-</html>
+
+</html>   
