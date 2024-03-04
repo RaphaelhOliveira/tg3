@@ -28,7 +28,7 @@ body {
   
   #car-list h3, #cart h3 {
     text-align: center;
-    color: #FF00FF; /* Neon rosa */
+    color: #FFF; /* Neon rosa */
   }
   
   #car-list ul, #cart-items {
