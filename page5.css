@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://png.pngtree.com/background/20221103/original/pngtree-4k-neon-light-wallpaper-picture-image_1944501.jpg'); /* Substitua 'background.jpg' com o caminho para a sua imagem de fundo */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  header {
+    background-color: #9400D3; /* Neon roxo */
+    color: #00FF00; /* Neon verde */
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 50px;
+  }
+  
+  #car-list, #cart {
+    width: 40%;
+    padding: 20px;
+  }
+  
+  #car-list h3, #cart h3 {
+    text-align: center;
+    color: #FF00FF; /* Neon rosa */
+  }
+  
+  #car-list ul, #cart-items {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #car-list li, #cart-items li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  #car-list img, #cart-items img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+  }
+  
+  #cart {
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com transparência */
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  
