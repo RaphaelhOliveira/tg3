@@ -1,114 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Grupo Volkswagen</title>
-    <style>
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-        }
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+    <link rel="stylesheet" type="text/css" href="robe.css">
+</head>        
 
-        
-        .logo {
-            display: block;
-            margin: 0 auto;
-            max-width: 300px;
-            width: 100%;
-            height: auto;
-        }
-        
-        .accordion {
-            background-color: #f4f4f4;
-            color: #333;
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            text-align: left;
-            border: none;
-            outline: none;
-            transition: background-color 0.3s ease;
-        }
-        
-        .accordion:hover {
-            background-color: #ddd;
-        }
-        
-        .panel {
-            padding: 0 18px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-        }
-
-        .panel p {
-            margin-top: 0;
-        }
-
-        .active {
-            background-color: #ddd;
-        }
-
-        .car-images {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .car-images img {
-            display: block;
-            margin: 5px;
-            width: calc(33.33% - 10px);
-            height: auto;
-        }
-    </style>
-</head>
 <body>
-
-<div class="container">
-    
-    <img class="logo" src="https://www.imagensempng.com.br/wp-content/uploads/2023/05/3707.png" alt="Logo Volkswagen">
-    
-    <button class="accordion">História</button>
-    <div class="panel">
-        <p>A Volkswagen foi fundada em 1937 por Ferdinand Porsche a pedido do líder alemão Adolf Hitler, para produzir um carro popular acessível às famílias alemãs. <br><br> A origem da empresa remonta à década de 1930, na Alemanha Nazi, e ao projeto de construção do automóvel que ficaria conhecido no Brasil como "Fusca", em Portugal como "Carocha", na Alemanha como "Käfer" e nos Estados Unidos e Reino Unido como "Beetle". O termo "Volkswagen" foi criado por volta de 1924 pelo engenheiro alemão-judeu Josef Ganz, que lutava para modernizar a indústria automobilística alemã, publicando suas ideias de introduzir suspensões independentes com semieixos oscilantes, baixo centro de gravidade e chassi com tubo central num automóvel popular que custasse o mesmo que uma motocicleta.</p>
+<section class="header" id="header">
+    <div class="nav-bar">
+        <div class="logo">
+            <a href="#">Volkswagen</a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">Carros</a></li>
+                <li><a href="#">História</a></li>
+                <li><a href="#">Tecnologia</a></li>
+                <li><a href="#">Produção</a></li>
+                <li><a href="#">Outros</a></li>
+            </ul>
+        </div>
     </div>
-
-    <button class="accordion">Marcas</button>
-    <div class="panel">
-        <p>O Grupo Volkswagen, além da marca Volkswagen, é, também, proprietário das marcas Audi, Bentley, Bugatti, Ducati, Lamborghini, SEAT, Porsche, Škoda Auto, MAN, Volkswagen Caminhões e Ônibus e Scania. Em março de 2011, a Volkswagen adquiriu o segmento comercial da Porsche por 3,3 bilhões de euros, adquirindo, assim, o direito de negociar e operar a marca "Porsche", fazendo com que a Volkswagen fique mais próxima à fusão com a "PHS" (Porsche Holding Salzburg).</p>
-    </div>
-
-    <button class="accordion">Carros</button>
-    <div class="panel car-images">
-        <img src="https://futuretransport.com.br/wp-content/uploads/2018/04/fusca-678x381.jpg" alt="Carro 1">
-        <img src="https://i.pinimg.com/736x/45/d6/92/45d69298c3ddf8fc2f841e3263a5479f.jpg" alt="Carro 2">
-        <img src="https://img.olx.com.br/images/41/410475485956913.jpg" alt="Carro 3">
-    </div>
-
-    <script>
-        var accordions = document.getElementsByClassName("accordion");
-
-        for (var i = 0; i < accordions.length; i++) {
-            accordions[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.maxHeight) {
-                    panel.style.maxHeight = null;
-                } else {
-                    panel.style.maxHeight = panel.scrollHeight + "px";
-                }
-            });
-        }
-    </script>
-</div>
-
-</body>
+</section>
+</body>    
 </html>
