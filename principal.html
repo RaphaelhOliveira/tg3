@@ -94,6 +94,12 @@
                 });
             });
         });
+
+        // Adicionando animação ao sair do site
+        window.addEventListener('beforeunload', function () {
+            document.body.classList.add('fade-out');
+        });
     </script>
 </body>
+
 </html>
