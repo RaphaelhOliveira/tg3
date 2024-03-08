@@ -1,78 +1,99 @@
-    <!DOCTYPE html>
-    <html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-br">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>CONCESSIONÁRIA</title>
-        <link rel="stylesheet" href="principal.css">
-        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>CONCESSIONÁRIA</title>
+    <link rel="stylesheet" href="principal.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
 
-    </head>
+<body>
 
-    <body>
-
-        <header class="header">
-            <a href="#" class="logo">Cars.</a>
-            <nav class="navbar">
-                <div class="dropdown">
-                    <a href="#" class="active">Concessionária</a>
-                    <div class="dropdown-content">
-                        <a href="page1.html">Carros à venda</a>
-                        <a href="page2.html">Carros mais vendidos</a>
-                        <a href="page3.html">Pacotes Sazonais</a>
-                        <a href="page4.html">Avalie aqui</a>
-                        <a href="page5.html">Meu carrinho</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <a href="#">Patrocinadores</a>
-                    <div class="dropdown-content">
-                        <a href="robe.html">Grupo Volkswagen</a>
-                        <a href="#">Grupo Ford</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <a href="#">Carros de exposição</a>
-                    <div class="dropdown-content">
-                        <a href="#">Fórmula 1</a>
-                        <a href="#">WEC</a>
-                        <a href="#">GT Series</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <a href="#">Sobre nós</a>
-                    <div class="dropdown-content">
-                        <a href="#">Quem somos</a>
-                        <a href="#">Equipe</a>
-                        <a href="#">Contato</a>
-                    </div>
-                </div>
-            </nav>
-
-            <div class="social-media">
-                <a href="#"><i class='bx bxl-twitter'></i></a>
-                <a href="#"><i class='bx bxl-facebook'></i></a>
-                <a href="#"><i class='bx bxl-instagram-alt'></i></a>
-            </div>
-        </header>
-
-        <section class="home">
-            <div class="home-content">
-                <h1>Concessionária</h1>
-                <h3>Bem-vindo à Concessionária Cars.</h3> <!-- Subtítulo adicionado -->
-                <p>A Concessionária Cars é uma empresa líder no mercado automotivo brasileiro. Com uma vasta seleção de veículos novos e usados, estamos prontos para atender às suas necessidades de mobilidade.</p> <!-- Texto atualizado para o português do Brasil -->
-                <a href="https://www.ferrari.com/en-BR" class="btn">exemplo de carro</a> <!-- Forneça um link adequado -->
-            </div>
-
-            <div class="home-img">
-                <div class="rhombus">
-                    <img src="carrora6.png.png" alt="Carro">
+    <header class="header">
+        <a href="#" class="logo">Cars.</a>
+        <nav class="navbar">
+            <div class="dropdown">
+                <a href="#" class="active">Concessionária</a>
+                <div class="dropdown-content">
+                    <a href="page1.html">Carros à venda</a>
+                    <a href="page2.html">Carros mais vendidos</a>
+                    <a href="page3.html">Pacotes Sazonais</a>
+                    <a href="page4.html">Avalie aqui</a>
+                    <a href="page5.html">Meu carrinho</a>
                 </div>
             </div>
+            <div class="dropdown">
+                <a href="#">Patrocinadores</a>
+                <div class="dropdown-content">
+                    <a href="robe.html">Grupo Volkswagen</a>
+                    <a href="#">Grupo Ford</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Carros de exposição</a>
+                <div class="dropdown-content">
+                    <a href="#">Fórmula 1</a>
+                    <a href="#">WEC</a>
+                    <a href="#">GT Series</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Sobre nós</a>
+                <div class="dropdown-content">
+                    <a href="#">Quem somos</a>
+                    <a href="#">Equipe</a>
+                    <a href="#">Contato</a>
+                </div>
+            </div>
+        </nav>
 
-            <div class="rhombus2"></div>
-        </section>
-    </body>
-    </html>
+        <div class="social-media">
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+        </div>
+    </header>
+
+    <section class="home">
+        <div class="home-content">
+            <h1>Concessionária</h1>
+            <h3>Bem-vindo à Concessionária Cars.</h3>
+            <p>A Concessionária Cars é uma empresa líder no mercado automotivo brasileiro. Com uma vasta seleção de veículos novos e usados, estamos prontos para atender às suas necessidades de mobilidade.</p>
+            <a href="https://www.ferrari.com/en-BR" class="btn">exemplo de carro</a>
+        </div>
+
+        <div class="home-img">
+            <div class="rhombus">
+                <img src="carrora6.png.png" alt="Carro">
+            </div>
+        </div>
+
+        <div class="rhombus2"></div>
+    </section>
+
+    <script>
+        // Adicionando JavaScript para interação de menu dropdown
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdowns = document.querySelectorAll('.dropdown');
+            dropdowns.forEach(dropdown => {
+                dropdown.addEventListener('click', function (event) {
+                    event.stopPropagation(); // Evita que o evento de clique do documento seja acionado
+                    this.querySelector('.dropdown-content').classList.toggle('show');
+                });
+            });
+
+            // Fechar o menu dropdown quando clicar fora dele
+            document.addEventListener('click', function (event) {
+                dropdowns.forEach(dropdown => {
+                    if (!dropdown.contains(event.target)) {
+                        dropdown.querySelector('.dropdown-content').classList.remove('show');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
