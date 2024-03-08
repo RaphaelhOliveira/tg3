@@ -214,22 +214,8 @@ body {
     }
 }
 
-        @keyframes slideOut {
-            from {
-                transform: translateX(0);
-                opacity: 1;
-            }
-            to {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-        }
 
-        .slide-out {
-            animation: slideOut 0.5s ease forwards;
-        }
-
-        @keyframes slideDown {
+      @keyframes slideDown {
             from {
                 transform: translateY(0);
                 opacity: 1;
@@ -241,5 +227,5 @@ body {
         }
 
         .slide-down {
-            animation: slideDown 0.5s ease forwards;
+            animation: slideDown 1s ease forwards; /* Ajuste a duração para 1 segundo */
         }
