@@ -1,51 +1,47 @@
-<!DOCTYPE html>
-<html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Avaliação - Extiman Cars</title>
-<link rel="stylesheet" href="page4.css">
-</head>
-<body>
-<div class="background">
+    <meta charset="utf-8">
+    <title>Extiman Cars</title>
+    <link rel="stylesheet" href="page4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+  <body>
     <nav>
-        <div class="logo">Extiman <span>Cars</span></div>
         <ul>
-            <li><a href="page1.html">Vendas</a></li>
-            <li><a href="page2.html">Mais Vendidos</a></li>
-            <li><a href="page3.html">Pacotes Sazonais</a></li>
-            <li><a href="page4.html">Avaliação</a></li>
+          <li><a href="page1.html">Vendas</a></li>
+          <li><a href="page2.html">Carros mais Vendidos</a></li>
+          <li><a href="page3.html">Pacotes Sazonais</a></li>
+          <li><a href="page4.html">Avaliação</a></li>
+          <li><a href="page5.html">Meu carrinho</a></li>
         </ul>
     </nav>
-    <div class="Main">
-        <h1>Avaliação</h1>
-        <h4>Preencha o formulário abaixo para nos enviar uma avaliação.</h4>
-        <div class="Container-btn">
-            <form id="form">
-                <input type="text" placeholder="Nome">
-                <input type="email" placeholder="Email">
-                <div class="rating">
-                    <label><input type="radio" name="rating" value="5"><span class="star"></span></label>
-                    <label><input type="radio" name="rating" value="4"><span class="star"></span></label>
-                    <label><input type="radio" name="rating" value="3"><span class="star"></span></label>
-                    <label><input type="radio" name="rating" value="2"><span class="star"></span></label>
-                    <label><input type="radio" name="rating" value="1"><span class="star"></span></label>
-                </div>
-                <textarea placeholder="Deixe seu comentário"></textarea>
-                <input type="submit" class="btn" value="Enviar Avaliação">
-            </form>
-        </div>
+    <div class="container">
+      <div class="post">
+        <div class="text">Obrigado tenha um bom dia!</div>
+        <div class="edit">EDIT</div>
+      </div>
+      <div class="star-widget">
+        <input type="radio" name="rate" id="rate-5">
+        <label for="rate-5" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-4">
+        <label for="rate-4" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-3">
+        <label for="rate-3" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-2">
+        <label for="rate-2" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-1">
+        <label for="rate-1" class="fas fa-star"></label>
+        <form action="#">
+          <header></header>
+          <div class="textarea">
+            <textarea cols="30" placeholder="Descreva sua experiência.."></textarea>
+          </div>
+          <div class="btn">
+            <button type="submit">Postar</button>
+          </div>
+        </form>
+      </div>
     </div>
-</div>
-<footer>
-    <h6>Extiman Cars</h6>
-    <p>Rua das Carros, 1234 - Cidade das Máquinas</p>
-    <div class="Redes-sociais">
-        <a href="#">A</a>
-        <a href="#">V</a>
-        <a href="#">L</a>
-    </div>
-</footer>
-<script src="page4.js"></script>
-</body>
+    <script src="page4.js"></script>
+  </body>
 </html>
+
