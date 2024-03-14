@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
-</head>        
+</head>      
 
 <body>
 <section class="header" id="header">
@@ -71,6 +71,10 @@
             autoplay:true,
             dots:true,
             speed:1000,
+            customPaging : function(slider, i) {
+                var thumb = $ (slider.$slides[i]).data();
+                return '<a>'+(i+1)+'</a>';
+            },
         })
     });
 </script>
