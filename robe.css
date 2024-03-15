@@ -161,40 +161,4 @@ li{
     float: right;
 }
 
-.slick-next, .slick-prev{
-    top: 110% !important;
-    z-index: 999;
-}
 
-.slick-prev{
-    position: absolute;
-    left: 950px !important;
-}
-
-.slick-next{
-    position: absolute;
-    right: 178px !important;
-}
-
-.slick-next:before, .slick-prev:before{
-    font-size: 45px !important;
-}
-
-.slick-dots{
-    padding-left: 450px !important;
-    margin-bottom: -50px !important;
-}
-
-.slick-dots li{
-    margin-right: 15px !important;
-}
-
-.slick-dots li.slick-active:after{
-    position: absolute;
-    content: '.';
-    bottom: -15px;
-    left: 6px;
-    opacity: 1;
-    color: red;
-    font-size: 36px;
-}
