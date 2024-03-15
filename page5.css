@@ -167,8 +167,8 @@ header {
 
 /* Hero Section */
 .hero-section {
-  height: 300px;
-  background-image: url("https://st.depositphotos.com/2098885/3243/v/450/depositphotos_32432527-stock-illustration-car-silhouette-with-lights-on.jpg");
+  height: 400px;
+  background-image: url("https://faaftech.com/blog/wp-content/uploads/2021/12/Dodge-Challenger-antigo-Desktop.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -186,8 +186,8 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
-  max-width: 1280px;
-  width: 100%;
+  max-width: 1080px;
+  width: 80%;
 }
 
 .shop-link {
