@@ -167,8 +167,8 @@ header {
 
 /* Hero Section */
 .hero-section {
-  height: 400px;
-  background-image: url("images/hero-img.jpg");
+  height: 300px;
+  background-image: url("https://st.depositphotos.com/2098885/3243/v/450/depositphotos_32432527-stock-illustration-car-silhouette-with-lights-on.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -201,8 +201,8 @@ header {
 
 
 .shop-link img {
-  width: 100%;
-  height: 280px;
+  width: 80%;
+  height: 250px;
   object-fit: cover;
   margin-bottom: 10px;
 }
