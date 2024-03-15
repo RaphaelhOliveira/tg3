@@ -185,8 +185,8 @@ header {
 .shop-images {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 50px;
-  max-width: 1080px;
+  gap: 70px;
+  max-width: 1020px;
   width: 80%;
 }
 
