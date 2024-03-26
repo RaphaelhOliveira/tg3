@@ -59,7 +59,6 @@ nav, .infos, .info,
     display: flex;
     justify-content: center;
     align-items: center;
-    size-adjust: 500px;
 }
 
 header {
