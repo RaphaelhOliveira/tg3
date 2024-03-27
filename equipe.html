@@ -43,5 +43,22 @@
         </div>
     </section>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Selecionando todos os cartões da equipe
+            var teamCards = document.querySelectorAll(".team-card");
+
+            // Adicionando um evento de clique para cada cartão da equipe
+            teamCards.forEach(function(card) {
+                card.addEventListener("click", function() {
+                    // Obtendo o nome da pessoa da equipe a partir do texto do título dentro do cartão
+                    var name = card.querySelector(".team-detail h3").textContent;
+                    // Exibindo uma mensagem com o nome da pessoa da equipe clicada
+                    alert("Você clicou em " + name);
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
