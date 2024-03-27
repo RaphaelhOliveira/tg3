@@ -17,11 +17,8 @@
             <h4>Digite Sua Mensagem Aqui...</h4>
             <textarea id="message" required></textarea>
             <input type="submit" value="Enviar" id="button">
+            <div id="thankYouMessage">Obrigado pela sua opinião!</div>
         </form>
-    </div>
-
-    <div id="thankYouMessage">
-        <h1>Obrigado pela sua opinião</h1>
     </div>
 
     <script>
@@ -30,8 +27,16 @@
             var thankYouMessage = document.getElementById("thankYouMessage");
 
             form.addEventListener("submit", function(event) {
-                event.preventDefault();
-                thankYouMessage.style.display = "flex";
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    var invalidInputs = form.querySelectorAll(":invalid");
+                    invalidInputs.forEach(function(input) {
+                        input.classList.add("error");
+                    });
+                } else {
+                    thankYouMessage.style.display = "block";
+                    event.preventDefault();
+                }
             });
         });
     </script>
