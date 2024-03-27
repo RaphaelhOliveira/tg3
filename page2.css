@@ -18,6 +18,20 @@
     max-width: 100%;
     height: 100vh;
 }
+.video-container {
+    width: 640px;
+    height: 360px;
+    position: relative;
+    overflow: hidden;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    background-image: url('SnapSave.io-992 GT3RS _ Seattle's First [4K].mp4'); /* Substitua 'your-video-file.jpg' com a imagem do quadro inicial do seu vídeo */
+    background-size: cover;
+    animation: playVideo 60s linear infinite; /* Substitua '10s' com a duração do seu vídeo */
+
 
 header{
     display: flex;
