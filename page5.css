@@ -19,28 +19,6 @@ a {
 a:hover {
   color: #ddd;
 }
-
-/* Header or Navbar */
-header {
-  width: 100%;
-  background-color: #0f1111;
-}
-.navegação{
-    display: flex;
-}
-
-.navegação a{
-    color: var(--other-color);
-    font-size: var(--p-font);
-    font-weight: 500;
-    margin: 0 30px;
-    transition: a .55s ease;
-}
-
-.navegação a:hover{
-    color: var(--main-color);
-
-}
 .navbar {
   height: 60px;
   display: flex;
