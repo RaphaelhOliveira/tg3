@@ -128,14 +128,14 @@ header {
 
 .banner-content {
   margin: 0 auto;
-  max-width: 1280px;
+  max-width: 1380px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .panel {
-  max-width: 1280px;
+  max-width: 1380px;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -186,8 +186,8 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
   gap: 70px;
-  max-width: 1920px;
-  width: 120%;
+  max-width: 1820px;
+  width: 100%;
   color:purple;
 }
 
@@ -203,7 +203,7 @@ header {
 
 .shop-link img {
   width: 100%;
-  height: 550px;
+  height: 600px;
   object-fit: cover;
   margin-bottom: 15px;
 }
