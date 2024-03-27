@@ -32,7 +32,16 @@
             form.addEventListener("submit", function(event) {
                 event.preventDefault();
                 thankYouMessage.style.display = "block";
-                document.body.style.backgroundColor = "#000";
+                thankYouMessage.style.position = "fixed";
+                thankYouMessage.style.top = "0";
+                thankYouMessage.style.left = "0";
+                thankYouMessage.style.width = "100%";
+                thankYouMessage.style.height = "100%";
+                thankYouMessage.style.backgroundColor = "black";
+                thankYouMessage.style.color = "white";
+                thankYouMessage.style.textAlign = "center";
+                thankYouMessage.style.fontSize = "24px";
+                thankYouMessage.style.paddingTop = "50vh";
             });
         });
     </script>
