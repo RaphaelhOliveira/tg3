@@ -8,16 +8,37 @@
 </head>
 <body>
     <div class="container">
-        <form>
+        <form id="contactForm">
             <h1>Contato</h1>
             <input type="text" id="firstName" placeholder="Primeiro Nome" required>
-            <input type="text" id="lastName" placeholder="Sobre Nome" required>
+            <input type="text" id="lastName" placeholder="Sobrenome" required>
             <input type="email" id="email" placeholder="Email" required>
-            <input type="text" id="mobile" placeholder="Telefone" required>
+            <input type="tel" id="mobile" placeholder="Telefone" required>
             <h4>Digite Sua Mensagem Aqui...</h4>
-            <textarea required></textarea>
+            <textarea id="message" required></textarea>
             <input type="submit" value="Enviar" id="button">
+            <div id="thankYouMessage">Obrigado pela sua opinião!</div>
         </form>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var form = document.getElementById("contactForm");
+            var thankYouMessage = document.getElementById("thankYouMessage");
+
+            form.addEventListener("submit", function(event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    var invalidInputs = form.querySelectorAll(":invalid");
+                    invalidInputs.forEach(function(input) {
+                        input.classList.add("error");
+                    });
+                } else {
+                    thankYouMessage.style.display = "block";
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
