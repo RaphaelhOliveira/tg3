@@ -326,3 +326,40 @@ nav a:hover {
     z-index: 1;
 }
 
+.circle div {
+    border: inherit;
+    border-radius: inherit;
+    background: inherit;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: inherit;
+}
+
+.circle .inner-md-circle {
+    width: 75%;
+    height: 75%;
+    top: 10%;
+    animation-delay: 3s;
+}
+
+.circle .inner-sm-circle {
+    width: 50%;
+    height: 50%;
+    top: 20%;
+    animation-delay: 6s;
+}
+
+
+
+@keyframes glow {
+    0% {
+        box-shadow: none;
+    }
+    50% {
+        box-shadow: 0 0 1em #5bc7ca;
+    }
+    100% {
+        box-shadow: none;
+    }
+}
