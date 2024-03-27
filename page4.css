@@ -17,7 +17,7 @@ html,body{
 }
 
 .navegação a{
-    color: var(--other-color);
+    color: red(--other-color);
     font-size: var(--p-font);
     font-weight: 500;
     margin: 0 30px;
@@ -25,7 +25,7 @@ html,body{
 }
 
 .navegação a:hover{
-    color: var(--main-color);
+    color: green(--main-color);
 
 }
 nav {
