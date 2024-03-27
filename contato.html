@@ -17,25 +17,28 @@
             <h4>Digite Sua Mensagem Aqui...</h4>
             <textarea id="message" required></textarea>
             <input type="submit" value="Enviar" id="button">
-            <div id="thankYouMessage">Obrigado pela sua opinião!</div>
         </form>
     </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            // Selecionando o formulário
             var form = document.getElementById("contactForm");
-            var thankYouMessage = document.getElementById("thankYouMessage");
 
+            // Adicionando um evento de envio para o formulário
             form.addEventListener("submit", function(event) {
+                // Verificando se o formulário é válido
                 if (!form.checkValidity()) {
+                    // Impedindo o envio do formulário se não for válido
                     event.preventDefault();
+                    // Adicionando classes de erro aos campos inválidos
                     var invalidInputs = form.querySelectorAll(":invalid");
                     invalidInputs.forEach(function(input) {
                         input.classList.add("error");
                     });
                 } else {
-                    thankYouMessage.style.display = "block";
-                    event.preventDefault();
+                    // Se o formulário for válido, você pode adicionar aqui a lógica para enviar os dados
+                    alert("Formulário enviado com sucesso!");
                 }
             });
         });
