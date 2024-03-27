@@ -141,3 +141,124 @@ nav a:hover {
     max-width: 15em;
 }
 
+.specs {
+    background: 
+    url('')
+    no-repeat center;
+    background-size: cover;
+    min-height: 40em;
+    position: relative;
+    padding-top: 8em;
+    padding-bottom: 8em;
+}
+
+.specs-header, .specs ul {
+    position: relative;
+    z-index: 1;
+}
+
+.specs ul {
+    width: 40em;
+    margin-top: 3em;
+}
+
+.specs li {
+    padding: 0.6em 0;
+    border-bottom: #555 1px solid;
+}
+
+.specs li span:first-child {
+    color: #888;
+}
+
+.panels {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 40em;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 8em;
+}
+
+.panel > div {
+    padding: 1em;
+}
+
+.panels-sm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.panel:first-child,
+.panel:last-child {
+    padding: 1em;
+}
+
+.panel:first-child {
+    background: #5bc7ca;
+}
+
+.panel:last-child {
+    background: #fff;
+    color: #555;
+}
+
+.panel:nth-child(2) {
+    background: 
+    url('')
+    no-repeat center;
+}
+
+.panel:nth-child(3) {
+    background: 
+    url('')
+    no-repeat center;
+}
+
+.panel:nth-child(2),
+.panel:nth-child(3) {
+    background-size: cover;
+    position: relative;
+}
+
+.specs::before,
+.panel:nth-child(2):before,
+.panel:nth-child(3):before {
+    content: '';
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.panel h2 {
+    margin: 0.7em 0;
+}
+
+.panel-lg {
+    background: 
+    url('')
+    no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.icon {
+    font-size: 2em;
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.panel:first-child .icon {
+    border: 3px #fff solid;
+}
+
+.panel:nth-child(4) .icon {
+    border: 3px #555 solid;
+}
+
