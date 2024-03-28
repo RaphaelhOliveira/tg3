@@ -49,7 +49,7 @@
         </div>
         <div class="infos">
             <div class="info">
-                <img src="ford.png" alt="icon" />
+                <img src="??????" alt="icon" />
                 <div>
                     <h3>Agilidade</h3>
                     <p>
@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div class="info">
-                <img src="speed.png" alt="icon" />
+                <img src="??????" alt="icon" />
                 <div>
                     <h3>Performance</h3>
                     <p>
@@ -69,7 +69,7 @@
                 </div>
             </div>
             <div class="info">
-                <img src="ray.png" alt="icon" />
+                <img src="???????" alt="icon" />
                 <div>
                     <h3>No Limite</h3>
                     <p>
@@ -191,5 +191,42 @@
             </div>
         </div>
     </section>
+
+    <script>
+        const menu = document.querySelector('.menu');
+        const menuBtn = document.querySelector('.menu-btn');
+
+        menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('menu-open');
+        });
+
+        const stats = document.querySelector('.stats');
+        const counters = document.querySelectorAll(".counter");
+        let bol = false;
+
+        const sectionOffset = stats.offsetTop + stats.offsetHeight;
+
+        window.addEventListener("scroll", () => {
+            const pageOffset = window.innerHeight + pageYOffset;
+            if(pageOffset > sectionOffset && bol === false) {
+                couters.forEach((counter) => {
+                    function updateCount() {
+                        const target = +counter.getAttribute('data-target');
+                        const speed = +counter.getAttribute('data-speed');
+                        const count = +counter.innerText;
+
+                        if(count < target) {
+                            counter.innerText = count + 1;
+                            setTimeout(updateCount, speed);
+                        } else {
+                            counter,innerText = target;
+                        }
+                    }
+                    updateCount();
+                    bol = true;
+                });
+            }
+        });
+    </script>
 </body>
 </html>
