@@ -123,7 +123,7 @@ section h1{
     height: 300px;
     transition: 0.35s ease;
     position: relative;
-    top: 20px;
+    top: 120px;
 }
 
 .cards img:hover{
