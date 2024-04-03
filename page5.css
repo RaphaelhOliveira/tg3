@@ -203,7 +203,7 @@ html {
   display: inline-block;
   margin-top: 10px;
   font-size: 0.9rem;
-  color: blue;
+  color: #fff;
   font-weight: 500;
   transition: color 0.3s ease;
 }
