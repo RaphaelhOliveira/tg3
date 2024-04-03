@@ -8,9 +8,9 @@
 </head>
 <body>
     
-<section class="hero">
+<section class="hero" id="hero">
     <div class="heading">
-        <h1>SOBRE NÓS</h1>
+        <h1 id="titulo">SOBRE NÓS</h1>
     </div>
     <div class="container">
         <div class="hero-content">
@@ -28,12 +28,19 @@
     // Este é um exemplo de JavaScript para manipular a página
     // Por exemplo, você pode adicionar um evento de clique que exibe uma mensagem
     document.addEventListener("DOMContentLoaded", function() {
-        var btn = document.createElement("button");
-        btn.textContent = "Clique Aqui!";
-        btn.addEventListener("click", function() {
-            alert("Você clicou no botão!");
+        // Alterando o texto do título
+        var titulo = document.getElementById("titulo");
+        titulo.textContent = "Bem-vindo à Extiman Cars";
+        
+        // Mudando a cor de fundo da seção "hero" ao passar o mouse sobre ela
+        var hero = document.getElementById("hero");
+        hero.addEventListener("mouseover", function() {
+            hero.style.backgroundColor = "#f0f0f0"; // Mudando para cinza claro
         });
-        document.body.appendChild(btn);
+        
+        hero.addEventListener("mouseout", function() {
+            hero.style.backgroundColor = ""; // Voltando para a cor original
+        });
     });
 </script>
 
