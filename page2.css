@@ -39,6 +39,7 @@ header{
 .logo{
     font-weight: 500;
     font-size: 1rem;
+	
 }
 
 .cabeçalho-link{
@@ -68,6 +69,9 @@ header{
 .Meio{
     padding: 7rem 0 0 8.5rem;
     line-height: 4rem;
+    position:center;
+	align-items: center;
+    text-align: center;
 }
 
 .Meio h1{
@@ -84,6 +88,7 @@ header{
    font-size: 1rem;
    cursor: pointer;
    transition: 0.3s;
+	position:center;
 
 }
 
