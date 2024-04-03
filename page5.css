@@ -189,8 +189,8 @@ html {
 
 
 .shop-link img {
-  width: 105%;
-  height: 80px;
+  width: 255%;
+  height: 180px;
   object-fit: cover;
   margin-bottom: 15px;
 }
