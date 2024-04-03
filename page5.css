@@ -169,8 +169,8 @@ html {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(680px, 1fr));
   gap: 70px;
-  max-width: 8120px;
-  width: 200%;
+  max-width: 620px;
+  width: 80%;
   color:purple;
 }
 
