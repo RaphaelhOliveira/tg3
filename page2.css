@@ -72,11 +72,12 @@ header{
     position:center;
 	align-items: center;
     text-align: center;
+	color: #fff;
 }
 
 .Meio h1{
     font-size: 4rem;
-	Color: #fff;
+
     
 }
 
@@ -106,6 +107,7 @@ section h1{
     align-items: center;
     text-align: center;
     font-size: 2rem;
+Color: #purple;
 
 }
 
