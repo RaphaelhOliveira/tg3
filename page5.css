@@ -26,7 +26,7 @@ html {
 
 .nav-logo img {
   margin-top: 10px;
-  width: 108px;
+  width: 50px;
 }
 
 .address .deliver {
@@ -171,10 +171,10 @@ html {
 
 .shop-images {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(1780px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(580px, 1fr));
   gap: 70px;
-  max-width: 620px;
-  width: 100%;
+  max-width: 120px;
+  width: 80%;
   color:purple;
 }
 
@@ -189,8 +189,8 @@ html {
 
 
 .shop-link img {
-  width: 255%;
-  height: 180px;
+  width: 80%;
+  height: 80px;
   object-fit: cover;
   margin-bottom: 15px;
 }
