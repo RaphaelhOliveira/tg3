@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gt series</title>
+    <link rel="stylesheet" href="gt.css">
+</head>
+<body>
+    <section>
+        <h1>GT Series</h1>
+    </section>
+    <section>
+        <div class="container reveal">
+            <h2>Competição</h2>
+            <div class="cards">
+                <div class="text-card">
+                    <h3>Classificação</h3>
+                    <p>Todos os carros vão à pista para marcarem seus tepos de volta com pneus macios e pouca carga de combustível. Aqui serão definidas as posições de largada da Sprint.</p>
+                </div>
+                <div class="text-card">
+                    <h3>Sprint</h3>
+                    <p>Uma corrida curta (25% do tempo da corrida principal) que define o grid de lagrada da corrida principal.</p>
+                </div>
+                <div class="text-card">
+                    <h3>Corrida</h3>
+                    <p>Todos os carros alinhados no grid e prontos para rasgar as retas e curvas de qualquer circuito. Somente Três pilotos sobem ao pódio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container reveal">
+            <h2>Continentes</h2>
+            <div class="cards">
+                <div class="text-card">
+                    <h3>América</h3>
+                    <p>Eua, México e Brasil</p>
+                </div>
+                <div class="text-card">
+                    <h3>Europa</h3>
+                    <p>Alemanha, França, Itália, Bélgica, Espanha e Portugal.</p>
+                </div>
+                <div class="text-card">
+                    <h3>Ásia</h3>
+                    <p>japão, China e Malásia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container reveal">
+            <h2>Principais montadoras</h2>
+            <div class="cards">
+                <div class="text-card">
+                    <h3>Ferrari</h3>
+                    <p>A equipe de Maranello sempre vem forte e este ano não será diferente com o seu Ferrari 488 GTE.</p>
+                </div>
+                <div class="text-card">
+                    <h3>Porsche</h3>
+                    <p>Com o modelo 911 RSR GTE, a montadora alemã vem fortíssima para esta temporada.</p>
+                </div>
+                <div class="text-card">
+                    <h3>Ford</h3>
+                    <p>Nos últimos anos vem sendo subestimada, mas o Ford GT LM GTE se demonstrou um monstro das pistas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        window.addEventListener('scroll', reveal);
+
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+
+            for(var i = 0; i < reveals.length; i++) {
+
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 150;
+
+                if(revealtop < windowheight - revealpoint) {
+                    reveals[i].classList.add('active');
+                }
+                else {
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
