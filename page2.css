@@ -231,10 +231,10 @@ Color: #purple;
     gap: 5rem;
     justify-content: space-around;
     background-color: #111;
-    padding: 8rem;
-    margin-top: 5rem;
+    padding: 18rem;
+    margin-top: 15rem;
     display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+	grid-template-columns: repeat(auto-fit, minmax(300px, auto));
 }
 
 .meio-contato h3{
