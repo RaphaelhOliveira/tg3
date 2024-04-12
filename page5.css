@@ -171,9 +171,9 @@ html {
 
 .shop-images {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  gap: 70px;
-  max-width: 7000px;
+  grid-template-columns: repeat(auto-fit, minmax(780px, 1fr));
+  gap: 170px;
+  max-width: 100px;
   width: 100%;
   color:purple;
 }
