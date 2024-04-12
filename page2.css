@@ -145,10 +145,12 @@ Color: #purple;
     display: flex;
     align-items: center;
     margin-top: 5rem;
+	  position:center;
 }
 
 .text-cta{
     padding-left: 5rem;
+	  position:center;
 }
 
 .text-cta h6{
