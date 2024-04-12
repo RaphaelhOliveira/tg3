@@ -172,8 +172,8 @@ html {
 .shop-images {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(780px, 1fr));
-  gap: 170px;
-  max-width: 100px;
+  gap: 70px;
+  max-width: 7000px;
   width: 100%;
   color:purple;
 }
@@ -189,8 +189,8 @@ html {
 
 
 .shop-link img {
-  width: 100%;
-  height: 100px;
+  width: 75%;
+  height: 50px;
   object-fit: cover;
   margin-bottom: 15px;
 }
